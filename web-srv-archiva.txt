@@ -20,6 +20,10 @@
       "inline": [
         "/usr/bin/apt-get -y install wget"
       ]
+    },
+    {
+      "type": "shell",
+      "script": "archiva.sh"
     }
   ]
 }
