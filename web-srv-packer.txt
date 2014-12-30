@@ -8,7 +8,7 @@
       "ssh_username": "ubuntu",
       "ami_name": "packer-quick-start {{timestamp}}"
     }
-  ]
+  ],
   "provisioners": [
     {
       "type": "ansible-local",
