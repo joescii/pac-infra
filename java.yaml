@@ -1,0 +1,4 @@
+---
+# Installs java 1.7
+- name: install java
+  apt: pkg=openjdk-7-jre-headless update-cache=yes

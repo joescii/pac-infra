@@ -9,4 +9,10 @@
       "ami_name": "packer-quick-start {{timestamp}}"
     }
   ]
+  "provisioners": [
+    {
+      "type": "ansible-local",
+      "playbook_file": "java.yml"
+    }
+  ]
 }
