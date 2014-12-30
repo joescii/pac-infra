@@ -23,6 +23,13 @@
     },
     {
       "type": "shell",
+      "execute_command": "echo 'unzip' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+      "inline": [
+        "/usr/bin/apt-get -y install unzip"
+      ]
+    },
+    {
+      "type": "shell",
       "script": "archiva.sh"
     }
   ]
