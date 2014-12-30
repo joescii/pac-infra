@@ -12,17 +12,34 @@
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+      "execute_command": "echo 'java' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
       "inline": [
-        "sleep 30",
-        "apt-add-repository ppa:rquillo/ansible",
+        "sleep 10",
+        "/usr/bin/apt-get install python-software-properties",
+        "add-apt-repository ppa:webupd8team/java",
         "/usr/bin/apt-get update",
-        "/usr/bin/apt-get -y install ansible"
+        "/usr/bin/apt-get install oracle-java8-installer",
+        "/usr/lib/jvm/java-8-oracle/bin/java -version"
       ]
     },
     {
-      "type": "ansible-local",
-      "playbook_file": "java.yml"
-    }
+      "type": "shell",
+      "execute_command": "echo 'git' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+      "inline": [
+        "sleep 10",
+        "/usr/bin/apt-get -y install git"
+      ]
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'git' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+      "inline": [
+        "sleep 5",
+        "export JAVA_HOME=/usr/lib/jvm/java-8-oracle/",
+        "git clone https://github.com/joescii/prose-and-conz.git",
+        "cd prose-and-conz"
+        "sbt package"
+      ]
+    },
   ]
 }
