@@ -40,6 +40,6 @@
         "cd prose-and-conz",
         "sbt package"
       ]
-    },
+    }
   ]
 }
