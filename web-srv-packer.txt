@@ -32,17 +32,7 @@
         "/usr/bin/apt-get -y install git"
       ]
     },
-    {
-      "type": "shell",
-      "execute_command": "echo 'lift-snapshot' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
-      "inline": [
-        "export JAVA_HOME=/usr/lib/jvm/java-8-oracle/",
-        "git clone https://github.com/lift/framework lift-framework",
-        "cd lift-framework",
-        "git checkout unified-parsers",
-        "sbt publishLocal"
-      ]
-    },
+    
     {
       "type": "shell",
       "execute_command": "echo 'proseandconz' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
