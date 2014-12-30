@@ -11,9 +11,18 @@
   ],
   "provisioners": [
     {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+      "inline": [
+        "sleep 30",
+        "apt-add-repository ppa:rquillo/ansible",
+        "/usr/bin/apt-get update",
+        "/usr/bin/apt-get -y install ansible"
+      ]
+    },
+    {
       "type": "ansible-local",
-      "playbook_file": "java.yml",
-      "command": "/usr/bin/ansible-playbook"
+      "playbook_file": "java.yml"
     }
   ]
 }
