@@ -1,7 +1,12 @@
 #!/bin/bash -eux
 
 cd /usr/lib
-sudo wget http://mirrors.advancedhosters.com/apache/archiva/2.1.1/binaries/apache-archiva-2.1.1-bin.zip
-sudo unzip apache-archiva-2.1.1-bin.zip
-cd apache-archiva-2.1.1/bin
-sudo ./archiva start
+sudo wget http://mirror.cc.columbia.edu/pub/software/apache/archiva/1.3.9/binaries/apache-archiva-1.3.9.1-bin.zip
+sudo unzip apache-archiva-1.3.9.1-bin.zip
+
+sudo cat > /etc/init/archiva.conf <<- EOF
+script
+  /usr/lib/apache-archiva-1.3.9.1/bin/archiva start
+end script
+EOF
+
