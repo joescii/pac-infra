@@ -41,7 +41,7 @@
         "sleep 5",
         "export JAVA_HOME=/usr/lib/jvm/java-8-oracle/",
         "git clone https://github.com/lift/framework/tree/unified-parsers lift-framework",
-        "cd lift-framework"
+        "cd lift-framework",
         "sbt publishLocal"
       ]
     },
@@ -52,7 +52,7 @@
         "sleep 5",
         "export JAVA_HOME=/usr/lib/jvm/java-8-oracle/",
         "git clone https://github.com/joescii/prose-and-conz.git",
-        "cd prose-and-conz"
+        "cd prose-and-conz",
         "sbt package"
       ]
     }
