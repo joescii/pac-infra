@@ -12,7 +12,8 @@
   "provisioners": [
     {
       "type": "ansible-local",
-      "playbook_file": "java.yml"
+      "playbook_file": "java.yml",
+      "command": "/usr/bin/ansible-playbook"
     }
   ]
 }
