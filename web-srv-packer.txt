@@ -16,17 +16,6 @@
     },
     {
       "type": "shell",
-      "execute_command": "echo 'wget' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
-      "inline": [
-        "/usr/bin/apt-get -y install wget"
-      ]
-    },
-    {
-      "type": "shell",
-      "script": "sbt.sh"
-    },
-    {
-      "type": "shell",
       "execute_command": "echo 'git' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
       "inline": [
         "/usr/bin/apt-get -y install git"
