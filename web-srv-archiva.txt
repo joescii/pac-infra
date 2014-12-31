@@ -12,7 +12,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "java.sh"
+      "script": "java7.sh"
     },
     {
       "type": "shell",
